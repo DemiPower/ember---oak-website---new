@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ember & Oak</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 font-poppins">
+    <header>
+        <nav class="navbar section-content">
+            <a href="#" class="nav-logo">
+                <h2 class="logo-text">Ember & Oak</h2>
+            </a>
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"></button>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu-section" class="nav-link">Menu</a>
+                </li>
+                 <li class="nav-item">
+                    <a href="#reviews-section" class="nav-link">Reviews</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact-us-section" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+            <button id="menu-open-button" class="fas fa-bars"></button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="section-content">
+                <div class="hero-details">
+                    <h2 class="title">Welcome to Ember & Oak</h2>
+                    <h3 class="subtitle">Premium Quality</h3>
+                    <p class="description">Experience the finest steaks and a warm atmosphere at Ember & Oak Steakhouse. Join us for an unforgettable dining experience.</p>
+                    <div class="buttons">
+                        <a href="#menu-section" class="button menu">Menu</a>
+                        <a href="#" class="button book-table">Book a Table</a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="images/steakpotatoes.jpg" alt="Hero" class="hero-image">
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="section-content">
+                <div class="about-image-wrapper">
+                    <img src="images/raw_meat2.jpg" alt="About" class="about-image">
+                </div>
+                <div class="about-details">
+                    <h2 class="section-title">About Us</h2>
+                    <p class="text">Welcome to Ember & Oak, a rustic steakhouse where bold flavors meet warm, hearty meals. We're passionate about sourcing high-quality ingredients and preparing them with precision, creating dishes that are both satisfying and memorable. Come join us today, where you are guaranteed to have a great meal, AND a great time.</p>
+                    <div class="social-link-list">
+                        <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="chef-content" style="background-color:#778979; padding-bottom: 30px;">
+            <div class="section-content" >
+                <h2 class="section-title">Meet our Head Chefs</h2>
+                <div class="chef-list">
+                    <div class="chef">
+                        <img src="images/chef1.png" alt="Chef Michael">
+                        <h3>Michael</h3>
+                        <p> Michael is our executive chef, with over 20 years of experience in fine dining. He specializes in classic French cuisine with a modern twist.</p>
+                    </div>
+                    <div class="chef">
+                        <img src="images/chef2.png" alt="Chef Emily">
+                        <h3>Emily</h3>
+                        <p>Emily is our sous chef, and she brings a creative flair to our dishes.  She's passionate about using fresh, local ingredients.</p>
+                    </div>
+                    <div class="chef">
+                        <img src="images/chef3.png" alt="Chef David">
+                        <h3>David</h3>
+                        <p>David is our pastry chef. He creates delicious and beautiful desserts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="awards-section" style="padding-bottom: 30px;">
+            <section class="section-content">
+                <h2 class="section-title">Awards & Recognition</h2>
+                <p class="text">
+                    We are honored to have received the following awards and recognition for our commitment to culinary
+                    excellence and outstanding service:
+                </p>
+                <ul class="awards-list">
+                    <li>Best Steakhouse in City - 2023</li>
+                    <li>Golden Plate Award - 2022</li>
+                    <li>Chef's Choice Award - 2021</li>
+                    <li>Restaurant of the Year - 2020</li>
+                </ul>
+            </section>
+        </section>
+
+
+        <section id="menu-section" class="menu-section">
+            <div class="section-content">
+                <h2 class="section-title">Our Menu</h2>
+                <div class="filter-section">
+                    <div class="category-select">
+                        <button class="category-button" data-category="all">All</button>
+                        <button class="category-button" data-category="steak">Steak</button>
+                        <button class="category-button" data-category="pasta">Pasta</button>
+                        <button class="category-button" data-category="sides">Sides</button>
+                        <button class="category-button" data-category="dessert">Dessert</button>
+                    </div>
+                    <div class="filter-controls">
+                        <select id="sort-select">
+                            <option value="name">Name</option>
+                            <option value="price">Price</option>
+                        </select>
+                        <select id="order-select">
+                            <option value="asc">Ascending</option>
+                            <option value="desc">Descending</option>
+                        </select>
+                        <button id="filter-button">Filter & Sort</button>
+                    </div>
+                </div>
+                <ul class="menu-list">
+                    </ul>
+            </div>
+        </section>
+
+        <section id="reviews-section" class="review-section">
+            <div class="section-content">
+                <h2 class="section-title">Customer Reviews</h2>
+                <ul class="review-list">
+                    <li class="review-item">
+                        <div class="reviewer-name">John Smith</div>
+                        <p class="review-content">"The steak was cooked to perfection!  Great atmosphere and service."</p>
+                    </li>
+                    <li class="review-item">
+                        <div class="reviewer-name">Jane Doe</div>
+                        <p class="review-content">"Excellent steak and sides.  I'll be back!"</p>
+                    </li>
+                     <li class="review-item">
+                        <div class="reviewer-name">Mike Johnson</div>
+                        <p class="review-content">"The service was outstanding. Our server was very attentive and helpful."</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact-us-section" class="contact-us-section">
+            <div class="section-content">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="contact-info">
+                    <div class="location">
+                        <h3>Location 1</h3>
+                        <p>123 Main Street<br>Gonubie, East London<br>Phone: 012 345 5678<br>Email: info1@emberandoak.com</p>
+                    </div>
+                    <div class="location">
+                        <h3>Location 2</h3>
+                        <p>456 Oak Avenue<br>Nahoon, East London<br>Phone: 034 567 8910<br>Email: info2@emberandoak.com</p>
+                    </div>
+                    <div class="contact-form-wrapper">
+                        <h3>Send us a Message</h3>
+                        <form class="contact-form">
+                            <input type="text" placeholder="Your Name" required>
+                            <input type="email" placeholder="Your Email" required>
+                            <textarea placeholder="Your Message" required></textarea>
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
