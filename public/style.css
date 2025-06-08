@@ -89,6 +89,10 @@ header .navbar {
     font-weight: var(--font-weight-semibold);
 }
 
+.navbar .fas {
+    display: none;
+}
+
 .navbar .nav-menu {
     display: flex;
     gap: 10px;
@@ -532,6 +536,85 @@ header .navbar {
     background-color: var(--primary-color) ;
 }
 
+/* Button Styling */
+.book-btn {
+  background-color: #8b4513;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+.book-btn:hover {
+  background-color: #a0522d;
+}
+
+/* Modal Background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Box */
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 24px;
+  color: #555;
+  cursor: pointer;
+}
+
+/* Form Inputs */
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+form input,
+form select,
+form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #f3961c;
+}
+
+form button {
+  background-color: #f3961c;
+  color: white;
+  margin-top: 20px;
+  font-size: 16px;
+  border: none;
+}
+
+form button:hover {
+  background-color: #e67e22;
+}
+
+
+
 
 @media screen and (max-width: 900px) {
     :root {
@@ -591,6 +674,10 @@ header .navbar {
         display: block;
         margin-top: 17px;
         font-size: var(--font-size-l);
+    }
+
+    .navbar .fas {
+        display: flex;
     }
 
     .hero-section .section-content {

@@ -243,3 +243,80 @@ filterButton.addEventListener("click", filterAndSortMenuItems);
 
 displayMenuItems(menuItems);
 document.querySelector('[data-category="all"]').classList.add('active');
+
+
+// --- Modal booking form ---
+const openBtn = document.getElementById('openModal');
+const modal = document.getElementById('bookingModal');
+const closeBtn = document.getElementById('closeModal');
+
+openBtn.addEventListener('click', () => {
+    modal.style.display = 'flex';
+});
+closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+
+// --- Booking Form Submission ---
+const bookingForm = document.getElementById('bookingForm');
+bookingForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    const bookingData = Object.fromEntries(formData.entries());
+
+
+    try {
+        const response = await fetch('/booking', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(bookingData)
+        });
+
+        if (response.ok) {
+            alert('Booking submitted!');
+            bookingForm.reset();
+            modal.style.display = 'none';
+        } else {
+            alert('Failed to submit booking. Please try again.');
+        }
+    } catch (error) {
+        console.error('Booking submission error:', error);
+        alert('Error submitting booking.');
+    }
+});
+
+// --- Contact Form Submission ---
+const contactForm = document.getElementById('contactForm');
+contactForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    const contactData = Object.fromEntries(formData.entries());
+
+
+    try {
+        const response = await fetch('/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(contactData)
+        });
+
+        if (response.ok) {
+            alert('Message sent!');
+            contactForm.reset();
+        } else {
+            alert('Failed to send message. Please try again.');
+        }
+    } catch (error) {
+        console.error('Contact form error:', error);
+        alert('Error sending message.');
+    }
+});
