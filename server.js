@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
     res.sendFile('index.html');
 });
-console.log(process.env.DB_PASSWORD);
+console.log(process.env.MYSQLPASSWORD);
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
@@ -21,10 +21,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // MySQL Connection
 const db = mysql.createConnection({
-  host: process.env.DB_HOST || 'localhost',
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME
+  host: process.env.MYSQLHOST || 'localhost',
+  user: process.env.MYSQLUSER,
+  password: process.env.MYSQLPASSWORD,
+  database: process.env.MYSQLDATABASE
 });
 
 db.connect(err => {
