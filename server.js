@@ -12,7 +12,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
     res.sendFile('index.html');
 });
-console.log(process.env.MYSQLPASSWORD);
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
