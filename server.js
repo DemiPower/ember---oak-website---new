@@ -28,7 +28,7 @@ const db = mysql.createConnection({
 
 db.connect(err => {
   if (err) throw err;
-  console.log('✅ Connected to MySQL');
+  console.log('Connected to MySQL');
 });
 
 
@@ -72,5 +72,5 @@ app.post('/contact', (req, res) => {
 
 
 app.listen(process.env.PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${process.env.PORT}`);
+  console.log(`Server running on http://localhost:${process.env.PORT}`);
 });
