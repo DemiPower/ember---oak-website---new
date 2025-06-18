@@ -1,0 +1,83 @@
+Student Name: Demi Power
+
+Web Address: https://ember-oak-website-new-production.up.railway.app/#
+Github: https://github.com/DemiPower/ember---oak-website---new
+
+Project Name: Ember & Oak Steakhouse
+
+Technologies Used
+
+- Frontend: HTML, CSS, JavaScript
+- Backend: Node.js
+- Database: MySQL
+- Hosted via Railway
+
+
+SQL Database:
+
+CREATE TABLE `contact_messages` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `message` text NOT NULL,
+  `submitted_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `reservations` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `phone` varchar(20) NOT NULL,
+  `guests` int NOT NULL,
+  `reservation_date` date NOT NULL,
+  `reservation_time` time NOT NULL,
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `unique_booking` (`reservation_date`,`reservation_time`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+Ember & Oak Steakhouse User Manual:
+
+This user manual provides an overview of the Ember & Oak Steakhouse website, including its features, how to navigate it, and how to use the contact and reservation forms.
+
+Website Overview:
+The Ember & Oak Steakhouse website is designed to provide users with information about the restaurant, its menu, and the ability to make reservations or contact the restaurant directly. 
+
+Features:
+- Home Page: The landing page provides a welcoming message, as well as a button that takes you straight to the menu, and another that allows you to make a reservation.
+- About Page: Provides information about the restaurant's history, mission, and values, social media links, head chefs, as well as awards and recognitions.
+- Menu Page: Displays the restaurant's menu with various categories such as steaks, pasta, sides and desserts, with the option to sort and filter items.
+- Reviews Page: Displays customer reviews and testimonials about their dining experience at Ember & Oak Steakhouse.
+- Contact Page: Restaurant information and the ability to send messages directly to the restaurant for inquiries or feedback.
+
+
+Navigation:
+The website features a navigation bar at the top of each page, allowing users to easily access different sections of the site. The navigation links include:
+- Home
+- About
+- Menu
+- Reviews
+- Contact
+
+Contact Form:
+The contact form allows users to send messages to the restaurant. Users need to fill in their name, email address, and message. Upon submission, the message is stored in the MySQL database for the restaurant staff to review.
+Reservation Form:
+The reservation form allows users to book a table at the restaurant. Users must provide their name, phone number, number of guests, reservation date, and time. The form checks for existing reservations at the same date and time to avoid double bookings. Upon successful submission, the reservation details are stored in the MySQL database.
+
+Frequently Asked Questions (FAQs):
+Q1: How do I make a reservation?
+A1: To make a reservation, navigate to the "Home" page and click on the "Make a Reservation" button. Fill out the reservation form with your details and submit it.
+Q2: How can I contact the restaurant?
+A2: To contact the restaurant, go to the "Contact" page and fill out the contact form with your name, email, and message. Submit the form to send your inquiry.
+Q3: Can I view the menu online?
+A3: Yes, you can view the menu by navigating to the "Menu" page. The menu is categorized for easy browsing.
+Q4: Where can I find customer reviews?
+A4: Customer reviews can be found on the "Reviews" page, where you can read testimonials from other diners about their experiences at Ember & Oak Steakhouse.
+
+Troubleshooting:
+If you encounter any issues while using the website, here are some common troubleshooting steps:
+- Ensure you have a stable internet connection.
+- If the website does not load, try refreshing the page or clearing your browser cache.
+- If you experience issues with the contact or reservation forms, ensure all required fields are filled out correctly.
+If you continue to experience problems, please contact the restaurant directly via phone or email.
